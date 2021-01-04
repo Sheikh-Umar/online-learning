@@ -1,5 +1,4 @@
-My answers to the questions on SQLBolt.
-
-Question: Find the title to each film.
-Answer:
-SELECT * FROM movies;
+# Lesson 1 : SELECT queries 101 (Link: https://sqlbolt.com/lesson/select_queries_introduction)
+1. Find the title of each film
+```
+SELECT title FROM movies;
