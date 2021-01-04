@@ -1,0 +1,5 @@
+My answers to the questions on SQLBolt.
+
+Question: Find the title to each film.
+Answer:
+SELECT * FROM movies;
