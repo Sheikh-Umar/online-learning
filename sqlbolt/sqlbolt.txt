@@ -1,4 +1,22 @@
-# Lesson 1 : SELECT queries 101 (Link: https://sqlbolt.com/lesson/select_queries_introduction)
-1. Find the title of each film
-```
-SELECT title FROM movies;
+SQL Lesson 1: SELECT queries 101 
+(Link: https://sqlbolt.com/lesson/select_queries_introduction)
+Exercise 1 Tasks
+Q1: Find the title of each film
+SELECT Title
+FROM Movies;
+
+Q2: Find the director of each film
+SELECT Director
+FROM Movies;
+
+Q3: Find the title and director of each film
+SELECT Title, Director
+FROM Movies;
+
+Q4: Find the title and year of each film
+SELECT Title, Year
+FROM Movies;
+
+Q5: Find all the information about the film
+SELECT *
+FROM Movies;
