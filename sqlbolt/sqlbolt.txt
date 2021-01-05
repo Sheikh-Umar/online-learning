@@ -20,3 +20,29 @@ FROM Movies;
 Q5: Find all the information about the film
 SELECT *
 FROM Movies;
+
+
+SQL Lesson 2: Queries with constraints (Pt. 1)  (Link: https://sqlbolt.com/lesson/select_queries_with_constraints)
+Exercise 2 - Tasks
+Q1: Find the movie with the row id of 6
+SELECT * FROM movies
+WHERE Id = 6;
+
+Q2: Find the movies released in the years between 2000 and 2010
+SELECT *
+FROM Movies
+WHERE Year >= 2000 AND Year <= 2010;
+
+Q3: Find the movies not released in the years between 2000 and 2010
+SELECT *
+FROM Movies
+WHERE NOT (Year >= 2000 AND YEAR <= 2010);
+
+Q4: Find the first 5 Pixar movies and their release year
+SELECT Title, Year
+FROM Movies
+LIMIT 5;
+
+
+
+
