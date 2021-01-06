@@ -46,3 +46,26 @@ LIMIT 5;
 
 
 
+SQL Lesson 3: Queries with constraints (Pt. 2) (Link: https://sqlbolt.com/lesson/select_queries_with_constraints_pt_2)
+Exercise 3 Tasks
+Q1: Find all the Toy Story movies
+SELECT * FROM movies
+WHERE Title LIKE "Toy Story%";
+
+Q2: Find all the movies directed by John Lasseter
+SELECT * FROM movies
+WHERE Director = "John Lasseter";
+
+Q3: Find all the movies (and director) not directed by John Lasseter
+SELECT *
+FROM Movies
+WHERE Director != "John Lasseter";
+
+Q4: Find all the WALL-* movies
+SELECT *
+FROM Movies
+WHERE Title LIKE "WALL-%";
+
+
+
+
