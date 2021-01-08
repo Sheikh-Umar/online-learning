@@ -69,3 +69,32 @@ WHERE Title LIKE "WALL-%";
 
 
 
+SQL Lesson 4: Filtering and sorting Query results (Link: https://sqlbolt.com/lesson/filtering_sorting_query_results)
+Exercise 4 Tasks
+
+Q1: List all directors of Pixar movies (alphabetically), without duplicates
+SELECT Distinct Director
+FROM Movies
+ORDER BY Director;
+
+Q2: List the last four Pixar movies released (ordered from most recent to least)
+SELECT *
+FROM Movies
+ORDER BY Year DESC
+LIMIT 4;
+
+Q3: List the first five Pixar movies sorted alphabetically
+SELECT *
+FROM Movies
+ORDER BY Title ASC
+LIMIT 5;
+
+Q4: List the next five Pixar movies sorted alphabetically
+SELECT *
+FROM Movies
+ORDER BY Title ASC
+LIMIT 5 OFFSET 5;
+
+
+
+
