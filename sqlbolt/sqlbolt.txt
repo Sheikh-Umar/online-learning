@@ -138,3 +138,28 @@ LIMIT 2 OFFSET 2;
 
 
 
+SQL Lesson 6: Multi-table queries with JOINs (Link: https://sqlbolt.com/lesson/select_queries_with_joins)
+Exercise 6 Tasks
+Q1: Find the domestic and international sales for each movie 
+SELECT Title, Domestic_sales, International_sales
+FROM Movies
+INNER JOIN Boxoffice
+ON Movies.Id = Boxoffice.Movie_Id;
+
+Q2: Show the sales numbers for each movie that did better internationally rather than domestically 
+SELECT Title, Domestic_sales, International_sales
+FROM Movies
+INNER JOIN Boxoffice
+ON Movies.Id = Boxoffice.Movie_Id
+WHERE International_sales > Domestic_sales;
+
+Q3: List all the movies by their ratings in descending order 
+SELECT Title, Rating
+FROM Movies
+INNER JOIN Boxoffice
+ON Movies.Id = Boxoffice.Movie_Id
+ORDER BY Rating DESC;
+
+
+
+
