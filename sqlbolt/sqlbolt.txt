@@ -163,3 +163,22 @@ ORDER BY Rating DESC;
 
 
 
+SQL Lesson 7: Outer JOINs (Link: https://sqlbolt.com/lesson/select_queries_with_outer_joins)
+Exercise 7 Tasks
+Q1: Find the list of all buildings that have employees
+SELECT Distinct Building
+FROM Employees;
+
+Q2: Find the list of all buildings and their capacity
+SELECT *
+FROM Buildings;
+
+Q3: List all buildings and the distinct employee roles in each building (including empty buildings) 
+SELECT Distinct Building_name, Role
+FROM Buildings
+LEFT OUTER JOIN Employees
+ON Buildings.Building_name = Employees.Building;
+
+
+
+
