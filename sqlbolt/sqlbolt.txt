@@ -182,3 +182,21 @@ ON Buildings.Building_name = Employees.Building;
 
 
 
+SQL Lesson 8: A short note on NULLs (Link: https://sqlbolt.com/lesson/select_queries_with_nulls)
+Exercise 8 - Tasks
+Q1: Find the name and role of all employees who have not been assigned to a building 
+SELECT Name, Role
+FROM Employees
+WHERE Building IS NULL;
+
+
+Q2: Find the names of the buildings that hold no employees
+SELECT Building_name, Name
+FROM Buildings
+LEFT OUTER JOIN Employees
+ON Buildings.Building_name = Employees.Building
+WHERE NAME IS NULL;
+
+
+
+
