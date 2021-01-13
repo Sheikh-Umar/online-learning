@@ -1,5 +1,5 @@
-# SQL Practice
-This repository contains my solutions to SQL-related questions on programming websites.
+# SQL Education
+This repository contains my solutions to out-of-school SQL-related courses that I have completed.
 
 Programming Website | URL
 ---------- | ----------
