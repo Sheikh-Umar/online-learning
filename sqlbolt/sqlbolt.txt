@@ -200,3 +200,27 @@ WHERE NAME IS NULL;
 
 
 
+SQL Lesson 9: Queries with expressions (Link: https://sqlbolt.com/lesson/select_queries_with_expressions)
+Exercise 9 - Tasks
+Q1: List all movies and their combined sales in millions of dollars
+SELECT Title, ((Domestic_sales + International_sales) / 1000000) AS combined_sales
+FROM Boxoffice
+INNER JOIN Movies
+ON Boxoffice.Movie_id = Movies.Id;
+
+Q2: List all movies and their ratings in percent
+SELECT Title, (Rating * 10.0) AS rating_percent
+FROM Movies
+INNER JOIN Boxoffice
+ON Movies.Id = Boxoffice.Movie_id;
+
+Q3: List all movies that were released on even number years 
+SELECT *
+FROM Movies
+INNER JOIN Boxoffice
+ON Movies.Id = Boxoffice.Movie_id
+WHERE ((Year % 2) == 0);
+
+
+
+
