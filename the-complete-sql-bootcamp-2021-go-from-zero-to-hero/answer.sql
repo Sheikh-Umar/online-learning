@@ -70,8 +70,11 @@
 	WHERE rating = 'R'
 	AND replacement_cost BETWEEN 5 AND 15;
 
+
 -- Q6: How many films have the word Truman somewhere in the title?
 	SELECT COUNT(*)
 	FROM film
 	WHERE title LIKE '%Truman%';
 
+
+s
