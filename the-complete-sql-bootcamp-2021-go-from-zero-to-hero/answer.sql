@@ -26,7 +26,6 @@
 	FROM address
 	WHERE address = '259 Ipoh Drive';
 
-
 -- Challenge: ORDER BY
 -- Q1: We want to reward our first 10 paying customers. What are the customer ids of the first 10 customers who created a payment?
 	SELECT customer_id
@@ -70,11 +69,8 @@
 	WHERE rating = 'R'
 	AND replacement_cost BETWEEN 5 AND 15;
 
-
 -- Q6: How many films have the word Truman somewhere in the title?
 	SELECT COUNT(*)
 	FROM film
 	WHERE title LIKE '%Truman%';
 
-
-s
