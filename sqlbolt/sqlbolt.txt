@@ -224,3 +224,22 @@ WHERE ((Year % 2) == 0);
 
 
 
+— SQL Lesson 10: Queries with aggregates (Pt. 1) (Link: https://sqlbolt.com/lesson/select_queries_with_aggregates)
+— Exercise 10 - Tasks
+— Q1: Find the longest time that an employee has been at the studio 
+SELECT Name, MAX(Years_employed)
+FROM Employees;
+
+— Q2: For each role, find the average number of years employed by employees in that role 
+SELECT ROLE, AVG(Years_employed) AS average_years_employed
+FROM Employees
+GROUP BY Role;
+
+— Q3: Find the total number of employee years worked in each building 
+SELECT Building, SUM(Years_employed) AS sum_years_employed
+FROM Employees
+GROUP BY Building;
+
+
+
+

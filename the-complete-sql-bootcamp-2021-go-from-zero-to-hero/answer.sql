@@ -4,12 +4,10 @@
 	SELECT first_name, last_name, email
 	FROM customer;
  
-
 -- Challenge: SELECT DISTINCT
 -- Q1: Retrieve the distinct rating types our films could have in our database
 	SELECT DISTINCT rating
 	FROM film;
-
 
 -- Challenge: SELECT WHERE
 -- Q1: A customer forgot their wallet at our store. We need to track down their email to inform them. What is the email for the customer with the name Nancy Thomas?
@@ -72,8 +70,11 @@
 	WHERE rating = 'R'
 	AND replacement_cost BETWEEN 5 AND 15;
 
+
 -- Q6: How many films have the word Truman somewhere in the title?
 	SELECT COUNT(*)
 	FROM film
 	WHERE title LIKE '%Truman%';
 
+
+s
