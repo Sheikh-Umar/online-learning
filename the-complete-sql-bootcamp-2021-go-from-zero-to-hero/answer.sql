@@ -77,4 +77,28 @@
 	WHERE title LIKE '%Truman%';
 
 
-s
+-- SECTION 3: GROUP BY STATEMENTS
+-- Challenge: GROUP BY
+-- Q1: We have two staff members, with Staff IDs 1 and 2. We want to give a bonus to the staff member that handled the most payments (Most in terms of payments processed, not total dollar amount). How many payments did each staff member handle and who gets the bonus?
+	SELECT staff_id, COUNT(*)
+	FROM payment
+	GROUP BY staff_id;
+
+-- Challenge: HAVING
+-- Q1: We are launching a platform service with our most loyal customers. We will assign a platinum status to customers that have had 40 or more transaction payments. What customer_ids are eligible for platinum status?
+	SELECT customer_id, COUNT(customer_id)
+	FROM payment
+	GROUP BY customer_id
+	HAVING COUNT(customer_id) >= 40;
+
+-- Q2: What are the customer ids of customers who have spent more than $100 in payment transactions with out staff_id member 2?
+	SELECT customer_id, SUM(amount)
+	FROM payment
+	WHERE staff_id = 2
+	GROUP BY customer_id
+	HAVING SUM(amount) > 100;
+
+
+
+
+
