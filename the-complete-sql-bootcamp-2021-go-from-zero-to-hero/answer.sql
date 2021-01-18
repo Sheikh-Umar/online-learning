@@ -26,7 +26,6 @@
 	FROM address
 	WHERE address = '259 Ipoh Drive';
 
-
 -- Challenge: ORDER BY
 -- Q1: We want to reward our first 10 paying customers. What are the customer ids of the first 10 customers who created a payment?
 	SELECT customer_id
@@ -70,7 +69,6 @@
 	WHERE rating = 'R'
 	AND replacement_cost BETWEEN 5 AND 15;
 
-
 -- Q6: How many films have the word Truman somewhere in the title?
 	SELECT COUNT(*)
 	FROM film
@@ -103,8 +101,7 @@
 
 
 
-
--- SECTION 4: ASSESSMENT TEST 1
+	-- SECTION 4: Assessment Test 1
 	-- Q1: Return the customer IDs of customers who have spent at least $110 with the staff member who has an ID of 2.
 	SELECT customer_id, SUM(amount)
 	FROM payment
@@ -127,3 +124,5 @@
 
 
 
+
+	
