@@ -264,3 +264,23 @@ WHERE Role = "Engineer";
 
 
 
+-- SQL Lesson 11: Queries with aggregates (Pt. 2) (Link: https://sqlbolt.com/lesson/select_queries_with_aggregates_pt_2)
+-- Exercise 11 - Tasks
+-- Q1: Find the number of Artists in the studio (without a HAVING clause) 
+SELECT Role, COUNT(*) AS total
+FROM Employees
+WHERE Role = "Artist";
+
+-- Q2: Find the number of Employees of each role in the studio 
+SELECT Role, COUNT(*) AS total
+FROM Employees
+GROUP BY Role;
+
+-- Q3: Find the total number of years employed by all Engineers 
+SELECT Role, SUM(Years_employed) AS total_years_employed
+FROM Employees
+WHERE Role = "Engineer";
+
+
+
+
