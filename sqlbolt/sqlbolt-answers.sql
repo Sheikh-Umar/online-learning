@@ -284,3 +284,20 @@ WHERE Role = "Engineer";
 
 
 
+-- SQL Lesson 12: Order of execution of a Query (Link: https://sqlbolt.com/lesson/select_queries_with_aggregates_pt_2)
+-- Exercise 12 - Tasks
+-- Q1: Find the number of movies each director has directed 
+SELECT Director, COUNT(*) AS total_number_of_movies_directed
+FROM Movies
+GROUP BY Director;
+
+-- Q2: Find the total domestic and international sales that can be attributed to each director 
+SELECT Director, SUM(Domestic_sales + International_sales) AS total_sales
+FROM Movies
+INNER JOIN Boxoffice
+ON Movies.Id = Boxoffice.Movie_Id
+GROUP BY DIRECTOR;
+
+
+
+
