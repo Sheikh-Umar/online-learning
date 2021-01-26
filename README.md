@@ -1,5 +1,7 @@
-# SQL Education
-This repository contains my solutions to SQL questions that I have completed. Simply click on the folder that corresponds to the course/website and access the document with the sql extension. The questions are listed on the document.
+# Online Learning
+This repository contains a summary of the massive open online courses (MOOCs) / interactive online learning websites that I have completed/am currently doing.
+
+## SQL
 
 Course/Website | URL | Status | Certificate of Completion (if applicable)
 ----------- | --------------------------------- | ----------- | --------------------------------- |
