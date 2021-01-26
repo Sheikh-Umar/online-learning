@@ -284,3 +284,34 @@ WHERE Role = "Engineer";
 
 
 
+-- SQL Lesson 12: Order of execution of a Query (Link: https://sqlbolt.com/lesson/select_queries_with_aggregates_pt_2)
+-- Exercise 12 - Tasks
+-- Q1: Find the number of movies each director has directed 
+SELECT Director, COUNT(*) AS total_number_of_movies_directed
+FROM Movies
+GROUP BY Director;
+
+-- Q2: Find the total domestic and international sales that can be attributed to each director 
+SELECT Director, SUM(Domestic_sales + International_sales) AS total_sales
+FROM Movies
+INNER JOIN Boxoffice
+ON Movies.Id = Boxoffice.Movie_Id
+GROUP BY DIRECTOR;
+
+
+
+
+
+-- SQL Lesson 13: Inserting Rows (Link: https://sqlbolt.com/lesson/inserting_rows)
+-- Exercise 13 - Tasks
+-- Q1: Add the studio's new production, Toy Story 4 to the list of movies (you can use any director) ✓
+INSERT INTO Movies VALUES
+(6, "Toy Story 4", "John Lasseter", 2016, 102);
+
+-- Q2: Toy Story 4 has been released to critical acclaim! It had a rating of 8.7, and made 340 million domestically and 270 million internationally. Add the record to the BoxOffice table. 
+INSERT INTO Boxoffice VALUES
+(6, 8.7, 340000000, 270000000);
+
+
+
+
