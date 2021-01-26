@@ -1,5 +1,5 @@
 # Online Learning
-This repository contains a summary of the massive open online courses (MOOCs) / interactive online learning websites that I have completed/am currently doing.
+This repository contains a summary of the massive open online courses (MOOCs) / interactive online learning websites that I have completed or am currently doing.
 
 ## SQL
 
