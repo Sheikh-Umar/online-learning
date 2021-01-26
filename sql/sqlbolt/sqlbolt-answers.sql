@@ -22,6 +22,7 @@ SELECT *
 FROM Movies;
 
 
+
 -- SQL Lesson 2: Queries with constraints (Pt. 1)  (Link: https://sqlbolt.com/lesson/select_queries_with_constraints)
 -- Exercise 2 - Tasks
 -- Q1: Find the movie with the row id of 6
@@ -138,7 +139,6 @@ LIMIT 2 OFFSET 2;
 
 
 
-
 -- SQL Lesson 6: Multi-table queries with JOINs (Link: https://sqlbolt.com/lesson/select_queries_with_joins)
 -- Exercise 6 Tasks
 -- Q1: Find the domestic and international sales for each movie 
@@ -163,7 +163,6 @@ ORDER BY Rating DESC;
 
 
 
-
 -- SQL Lesson 7: Outer JOINs (Link: https://sqlbolt.com/lesson/select_queries_with_outer_joins)
 -- Exercise 7 Tasks
 -- Q1: Find the list of all buildings that have employees
@@ -182,7 +181,6 @@ ON Buildings.Building_name = Employees.Building;
 
 
 
-
 -- SQL Lesson 8: A short note on NULLs (Link: https://sqlbolt.com/lesson/select_queries_with_nulls)
 -- Exercise 8 - Tasks
 -- Q1: Find the name and role of all employees who have not been assigned to a building 
@@ -197,7 +195,6 @@ FROM Buildings
 LEFT OUTER JOIN Employees
 ON Buildings.Building_name = Employees.Building
 WHERE NAME IS NULL;
-
 
 
 
@@ -224,7 +221,6 @@ WHERE ((Year % 2) == 0);
 
 
 
-
 -- SQL Lesson 10: Queries with aggregates (Pt. 1) (Link: https://sqlbolt.com/lesson/select_queries_with_aggregates)
 --  Exercise 10 - Tasks
 --  Q1: Find the longest time that an employee has been at the studio 
@@ -240,7 +236,6 @@ GROUP BY Role;
 SELECT Building, SUM(Years_employed) AS sum_years_employed
 FROM Employees
 GROUP BY Building;
-
 
 
 
@@ -263,7 +258,6 @@ WHERE Role = "Engineer";
 
 
 
-
 -- SQL Lesson 11: Queries with aggregates (Pt. 2) (Link: https://sqlbolt.com/lesson/select_queries_with_aggregates_pt_2)
 -- Exercise 11 - Tasks
 -- Q1: Find the number of Artists in the studio (without a HAVING clause) 
@@ -283,7 +277,6 @@ WHERE Role = "Engineer";
 
 
 
-
 -- SQL Lesson 12: Order of execution of a Query (Link: https://sqlbolt.com/lesson/select_queries_with_aggregates_pt_2)
 -- Exercise 12 - Tasks
 -- Q1: Find the number of movies each director has directed 
@@ -300,8 +293,6 @@ GROUP BY DIRECTOR;
 
 
 
-
-
 -- SQL Lesson 13: Inserting Rows (Link: https://sqlbolt.com/lesson/inserting_rows)
 -- Exercise 13 - Tasks
 -- Q1: Add the studio's new production, Toy Story 4 to the list of movies (you can use any director) ✓
@@ -311,7 +302,6 @@ INSERT INTO Movies VALUES
 -- Q2: Toy Story 4 has been released to critical acclaim! It had a rating of 8.7, and made 340 million domestically and 270 million internationally. Add the record to the BoxOffice table. 
 INSERT INTO Boxoffice VALUES
 (6, 8.7, 340000000, 270000000);
-
 
 
 
