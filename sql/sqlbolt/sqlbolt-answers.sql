@@ -374,3 +374,9 @@ ADD COLUMN Language TEXT DEFAULT English;
 
 
 
+-- SQL Lesson 18: Dropping tables (Link: https://sqlbolt.com/lesson/dropping_tables)
+-- Q1: We've sadly reached the end of our lessons, lets clean up by removing the Movies table
+DROP TABLE IF EXISTS Movies;
+
+-- Q2: And drop the BoxOffice table as well 
+DROP TABLE IF EXISTS BoxOffice;
