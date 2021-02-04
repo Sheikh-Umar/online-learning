@@ -124,8 +124,6 @@
 
 
 
-
-	
 -- SECTION 5: JOINS
 -- Challenge: JOIN
 	-- Q1: California sales tax laws have changed and we need to alert our customers to this through email. What are the emails of the customers who live in California?
@@ -145,6 +143,18 @@
 	WHERE actor.first_name = 'Nick'
 	AND actor.last_name = 'Wahlberg';
 
+
+
+
+-- SECTION 6: Advanced SQL Commands
+-- Challenge: Timestamps and Extract
+	-- Q1: During which months did payments occur? Format your answer to return back the full month name
+	SELECT DISTINCT(TO_CHAR(payment_date, 'MONTH'))
+	FROM payment;
+	-- Q2: How many payments occurred on a Monday?
+	SELECT COUNT(*)
+	FROM payment
+	WHERE EXTRACT(dow FROM payment_date) = 1;
 
 
 
