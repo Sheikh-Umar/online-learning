@@ -101,15 +101,15 @@
 
 
 
-	-- SECTION 4: Assessment Test 1
-	-- Q1: Return the customer IDs of customers who have spent at least $110 with the staff member who has an ID of 2.
+-- SECTION 4: Assessment Test 1
+-- Q1: Return the customer IDs of customers who have spent at least $110 with the staff member who has an ID of 2.
 	SELECT customer_id, SUM(amount)
 	FROM payment
 	WHERE staff_id = 2
 	GROUP BY customer_id, staff_id
 	HAVING SUM(amount) >= 110;
 
-	-- Q2: How many films begin with the letter J?
+-- Q2: How many films begin with the letter J?
 	SELECT COUNT(title)
 	FROM film
 	WHERE title LIKE 'J%';
@@ -192,7 +192,7 @@
 -- Q7: How can you produce a list of members who joined after the start of September 2012? Return the memid, surname, firstname, and joindate of the members in question.
 	SELECT memid, surname, firstname, joindate
 	FROM cd.members
-	WHERR EXTRACT(MONTH FROM joindate) >= 9;
+	WHERE EXTRACT(MONTH FROM joindate) >= 9;
 
 -- (ToCheck) Q8: How can you produce an ordered list of the first 10 surnames in the members table? The list must not contain duplicates.
 	SELECT DISTINCT(surname)
@@ -242,6 +242,46 @@
 	ON cd.bookings.memid = cd.members.memid
 	WHERE firstname = 'David'
 	AND surname = 'Farrell';
+
+
+
+
+-- SECTION 9: Assessment 3
+-- Q1: Create a new database called ‘School’. This database should have two tables: teachers and students. 
+    -- The students table should have columns for student_id, first_name, last_name, homeroom_number, phone, email, and graduation_year.
+    -- The teachers table should have columns for teacher_id, first_name, last_name, homeroom_number, department, email, and phone.
+    -- The constraints are mostly up to you, but your table constraints do have to consider the following:
+        -- We must have a phone number to contact students in case of an emergency.
+        -- We must have ids as the primary key of the tables
+        -- Phone numbers and emails must be unique to the individual
+
+-- Q1a: Once you’ve made the tables, insert a student called Mark Watney (student_id = 1) who has a phone number of 777-555-1234 and does not have an email, He graduates in 2035 and has 5 as a homeroom number.
+	CREATE TABLE students(
+		student_id SERIAL PRIMARY KEY,
+		first_name VARCHAR(50) NOT NULL,
+		last_name VARCHAR(50) NOT NULL,
+		homeroom_number SMALLINT,
+		phone VARCHAR(50) UNIQUE NOT NULL,
+		email VARCHAR(50) UNIQUE,
+		graduation_year SMALLINT CHECK (graduation_year > 1950)
+	);
+
+	INSERT INTO TABLE students
+	VALUES('Mark', 'Watney', 5, '777-555-1234', null, 2035);
+
+-- Q1b: Then insert a teacher names Jonas Salk (teacher_id = 1) who as a homeroom number of 5 and is from the Biology department. His contact info is: jsalk@school.org and a phone number of 777-555-4321.
+	CREATE TABLE teachers(
+		teacher_id SERIAL PRIMARY KEY,
+		first_name VARCHAR(50) NOT NULL,
+		last_name VARCHAR(50) NOT NULL,
+		homeroom_number smallint CHECK (homeroom_number > 0),
+		department VARCHAR(50) NOT NULL,
+		email VARCHAR(250) UNIQUE NOT NULL,
+		phone VARCHAR(50) UNIQUE NOT NULL
+	);
+	
+	INSERT INTO teachers(first_name, last_name, homeroom_number, department, email, phone)
+	VALUES('Jonas', 'Salk', 5, 'Biology', 'jsalk@school.org', '777-666-4321');
 
 
 
