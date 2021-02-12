@@ -286,3 +286,28 @@
 
 
 
+-- SECTION 10: Conditional Expressions and Procedures
+-- Challenge: CASE
+-- Q1: We want to know and compare the various amounts of films we have per movie rating. Use CASE and the dvdrental database to recreate this table
+	SELECT
+	SUM
+	(
+		CASE
+			WHEN rating = 'R' THEN 1
+		END
+	) AS r,
+	SUM
+	(
+	CASE
+		WHEN rating = 'PG' THEN 1
+			ELSE 0
+		END
+	) AS pg,
+	SUM
+	(
+		CASE
+			WHEN rating = 'PG-13' THEN 1
+			ELSE 0
+		END
+	) AS pg13
+FROM film;
